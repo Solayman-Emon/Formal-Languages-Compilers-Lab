@@ -38,9 +38,10 @@ int main()
                                             c = getc(p);
                                             do
                                             {
-                                                fputc(c, p1);
-                                            }
-                                            while((c = getc(p)) != ')');
+                                                if(c != '"'){
+                                                    fputc(c, p1);
+                                                }
+                                            }while((c = getc(p)) != ')');
                                         }
                                     }
                                 }
